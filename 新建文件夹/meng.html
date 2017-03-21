@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>哆啦A梦</title>
+	<style>
+	.tou{
+		width: 300px;
+		height: 300px;
+		background:#09b8e3; 
+		border-radius:50%;
+		margin:0 auto;
+		border:1px solid #000;
+		position: relative;
+	}
+	.face{
+		width: 240px;
+		height: 200px;
+		background: #fff;
+		border:1px solid #000;
+		border-radius: 50%;
+		position: absolute;
+		left: 30px;
+		top: 70px;
+		z-index: 10;
+	}
+	.lefteye{
+		width: 50px;
+		height: 60px;
+		background: #fff;
+		border-radius: 50%;
+		border:1px solid #000;
+		position: absolute;
+		top:-30px;
+		left:70px;
+	}
+	.righteye{
+		width: 50px;
+		height: 60px;
+		background: #fff;
+		border-radius: 50%;
+		border:1px solid #000;
+		position: absolute;
+		top:-30px;
+		left:121px;
+	}
+	.lefteyeball{
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #000;
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+	}
+	.righteyeball{
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #000;
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+	}
+	.nose{
+		width: 20px;
+		height: 20px;
+		background: red;
+		border-radius: 50%;
+		border:1px solid #000;
+		position: absolute;
+		left: 110px;
+		top:22px;
+	}
+	.leftmao1{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:60px;
+		left: 20px;
+		transform: rotate(15deg);
+	}
+	.leftmao2{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:80px;
+		left: 20px;
+	}
+	.leftmao3{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:100px;
+		left: 20px;
+		transform: rotate(-15deg);
+	}
+	.rightmao1{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:60px;
+		right: 20px;
+		transform: rotate(-15deg);
+	}
+	.rightmao2{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:80px;
+		right: 20px;
+	}
+	.rightmao3{
+		width: 80px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:100px;
+		right: 20px;
+		transform: rotate(15deg);
+	}
+	.nosemao{
+		width:2px;
+		height: 100px;
+		background: #000;
+		position: absolute;
+		left:120px;
+		top:43px;
+	}
+	.mouse{
+		width:180px;
+		height: 30px;
+		border-bottom: 2px solid #000;
+		border-radius: 50% ;
+		position: absolute;
+		left:30px;
+		bottom: 56px;
+	}
+	.body{
+		width: 200px;
+		height: 121px;
+		margin: -20px auto;
+		position: relative;
+
+	}
+	.bodyt{
+		width: 200px;
+		height: 40px;
+		background: #09b8e3;
+		
+	}
+	.bodyb{
+		width: 198px;
+		height: 90px;
+		background: #09b8e3;
+		border:1px solid #000;
+		border-top: none;
+		
+	}
+	.bodykong{
+		width: 12px;
+		height:8px;
+		background: #fff;
+		border-radius: 10px 10px 0 0 ;
+		border: 1px solid #000;
+		border-bottom: none;
+		position: absolute;
+		left: 93px;
+		bottom: -10px;
+	}
+	.armleft{
+		width:60px;
+		height: 30px;
+		background: #09b8e3;
+		border: 1px solid #000;
+		border-right: none;
+		position: absolute;
+		left: -41px;
+		top:18px;
+		transform: rotate(-45deg);
+		z-index: -10;
+	}
+	.handleft{
+		width:60px;
+		height: 60px;
+		background: #fff;
+		border-radius: 50%;
+		border: 1px solid #000;
+		position: absolute;
+		left:-40px;
+		top:-10px;
+	}
+	.armright{
+		width:60px;
+		height: 30px;
+		background: #09b8e3;
+		border: 1px solid #000;
+		border-left: none;
+		position: absolute;
+		right: -41px;
+		top:18px;
+		transform: rotate(45deg);
+		z-index: -10;
+	}
+	.handright{
+		width:60px;
+		height: 60px;
+		background: #fff;
+		border-radius: 50%;
+		border: 1px solid #000;
+		position: absolute;
+		right:-40px;
+		top:-10px;
+	}
+	.footleft{
+		width:108px;
+		height: 15px;
+		background: #fff;
+		border-radius: 10px;
+		border:1px solid #000;
+		position: absolute;
+		left: -12px;
+		top:130px;
+	}
+	.footright{
+		width:108px;
+		height: 15px;
+		background: #fff;
+		border-radius: 10px;
+		border:1px solid #000;
+		position: absolute;
+		right: -12px;
+		top:130px;
+	}
+	.duzi{
+		width: 160px;
+		height: 140px;
+		background: #fff;
+		border-radius: 50%;
+		border: 1px solid #000;
+		position: absolute;
+		left: 20px;
+		top:-30px;
+	}
+	.dou{
+		width:120px;
+		height: 60px;
+		background: #fff;
+		border-radius: 0 0 60px 60px;
+		border: 1px solid #000;
+		position: absolute;
+		left: 20px;
+		top:60px;
+	}
+	.lingdai{
+		width:200px;
+		height: 25px;
+		background: #ac2603;
+		border-radius: 10px;
+		position: absolute;
+		left: -20px;
+		top:10px;
+		z-index: 20;
+	}
+	.kouzi{
+		width: 38px;
+		height: 40px;
+		background: yellow;
+		border-radius: 50%;
+		border: 1px solid #000;
+		position: absolute;
+		left: 81px;
+		top:8px;
+	}
+	.line1{
+		width: 30px;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:5px;
+		left:3px;
+	}
+	.line2{
+		width: 100%;
+		height: 2px;
+		background: #000;
+		position: absolute;
+		top:10px;
+		left:0;
+	}
+	.heikuai{
+		width: 8px;
+		height: 8px;
+		background: #000;
+		border-radius: 50%;
+		position: absolute;
+		left: 15px;
+		top:20px;
+	}
+	.heixian{
+		width: 2px;
+		height: 12px;
+		background: #000;
+		position: absolute;
+		left: 18px;
+		top:28px;
+	}
+	</style>
+</head>
+<body>
+	<div class="tou">
+		<div class="face">
+			<div class="lefteye">
+				<div class="lefteyeball"></div>
+			</div>
+			<div class="righteye">
+				<div class="righteyeball"></div>
+			</div>
+			<div class="nose"></div>
+			<div class="leftmao1"></div>
+			<div class="leftmao2"></div>
+			<div class="leftmao3"></div>
+			<div class="rightmao1"></div>
+			<div class="rightmao2"></div>
+			<div class="rightmao3"></div>
+			<div class="nosemao"></div>
+			<div class="mouse"></div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="bodyt"></div>
+		<div class="bodyb"></div>
+		<div class="bodykong"></div>
+		<div class="footleft"></div>
+		<div class="footright"></div>
+		<div class="armleft">
+			<div class="handleft"></div>
+		</div>
+		<div class="armright">
+			<div class="handright"></div>
+		</div>
+		<div class="duzi">
+			<div class="lingdai">
+				<div class="kouzi">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="heikuai"></div>
+					<div class="heixian"></div>
+				</div>
+			</div>
+			<div class="dou"></div>
+		</div>
+	</div>
+</body>
+</html>
